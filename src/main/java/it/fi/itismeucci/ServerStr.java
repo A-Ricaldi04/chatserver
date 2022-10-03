@@ -19,6 +19,7 @@ public class ServerStr {
             client = server.accept();
             server.close();
             inDalClient = new BufferedReader(new InputStreamReader(client.getInputStream()));
+            outVersoClient=new DataOutputStream(client.getOutputStream());
         } catch (Exception e) {
             System.out.println(e.getMessage());
             System.out.println("Errore durante l'istanza del server !");
